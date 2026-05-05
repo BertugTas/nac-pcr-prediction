@@ -186,7 +186,7 @@ a { text-decoration:none; }
 }
 /* Glassmorphism counter cards */
 .hero-counters {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;
+  display:grid; grid-template-columns:repeat(5,1fr); gap:1rem;
   margin-bottom:2.8rem;
 }
 .counter-card {
@@ -393,7 +393,7 @@ body.light-theme .pipe-step.teal { color:var(--navy); }
 }
 .results-chart-wrap h3 { font-size:1rem; font-weight:700; color:#ffffff; margin-bottom:1.5rem; }
 body.light-theme .results-chart-wrap h3 { color:#0D1B2A; }
-.metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; }
+.metric-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1.2rem; }
 .metric-card {
   background:rgba(255,255,255,.05); backdrop-filter:blur(8px);
   border:1px solid rgba(255,255,255,.1); border-radius:var(--radius);
@@ -601,8 +601,12 @@ body.light-theme .results-chart-wrap h3 { color:#0D1B2A; }
         <div class="counter-lbl">F1 Score</div>
       </div>
       <div class="counter-card">
+        <span class="counter-val" id="counter-acc">0.000</span>
+        <div class="counter-lbl">Accuracy</div>
+      </div>
+      <div class="counter-card">
         <span class="counter-val" id="counter-hasta">0</span>
-        <div class="counter-lbl">Hasta (Patch)</div>
+        <div class="counter-lbl">Hastalar</div>
       </div>
     </div>
     <div class="hero-btns">
@@ -756,6 +760,7 @@ body.light-theme .results-chart-wrap h3 { color:#0D1B2A; }
         </div>
         <ul class="method-steps">
           <li><div class="step-check">✓</div>116 özellik — klinik + 3D radyomik (GLCM 13 yön, GLRLM 3 eksen, Shape, First-Order)</li>
+          <li><div class="step-check">✓</div>SER eşiği: ≥ 0.3 (özellik çıkarımı) / ≥ 0.5 (harmonizasyon ROI)</li>
           <li><div class="step-check">✓</div>LASSO + Mutual Information birleşik seçim — top-25 özellik</li>
           <li><div class="step-check">✓</div>BorderlineSMOTE (borderline-1) — sadece her train fold içinde</li>
           <li><div class="step-check">✓</div>5-Fold GroupKFold (patient-level) — data leakage sıfır</li>
@@ -822,6 +827,11 @@ body.light-theme .results-chart-wrap h3 { color:#0D1B2A; }
         <span class="metric-val">0.478</span>
         <div class="metric-lbl">MCC</div>
         <div class="metric-sub">Matthews Corr. Coef.</div>
+      </div>
+      <div class="metric-card reveal" style="transition-delay:.5s">
+        <span class="metric-val">0.745</span>
+        <div class="metric-lbl">Accuracy</div>
+        <div class="metric-sub">Dengeli sınıf tahmini</div>
       </div>
     </div>
     <p class="ci-note reveal">★ Bootstrap 95% CI · n=1000 resample · 5-Fold GroupKFold OOF tahminlerinden</p>
@@ -1045,6 +1055,7 @@ window.addEventListener('load', function() {
     { id: 'counter-auc',   target: 0.728, decimals: 3 },
     { id: 'counter-sens',  target: 0.794, decimals: 3 },
     { id: 'counter-f1',    target: 0.615, decimals: 3 },
+    { id: 'counter-acc',   target: 0.745, decimals: 3 },
     { id: 'counter-hasta', target: 261,   decimals: 0 }
   ];
   counters.forEach(function(c) {
@@ -1083,11 +1094,11 @@ function buildResultsChart() {
   new Chart(canvas, {
     type: 'bar',
     data: {
-      labels: ['Random Forest ★','Logistic Reg.','LightGBM','SVM','XGBoost','EfficientNet-B0'],
+      labels: ['Random Forest ★','Logistic Reg.','LightGBM','SVM','XGBoost','Ensemble (Stacking)','EfficientNet-B0'],
       datasets: [{
         label: 'AUC-ROC',
-        data: [0.728, 0.685, 0.659, 0.651, 0.593, 0.601],
-        backgroundColor: ['#00B4D8','#64748b','#64748b','#64748b','#64748b','#8b5cf6'],
+        data: [0.728, 0.685, 0.659, 0.651, 0.593, 0.632, 0.601],
+        backgroundColor: ['#00B4D8','#64748b','#64748b','#64748b','#64748b','#22C55E','#8b5cf6'],
         borderRadius: 6,
         barThickness: 32
       }]
