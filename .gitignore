@@ -1,0 +1,8 @@
+venv/
+data/
+__pycache__/
+*.pyc
+outputs/models/
+node_modules/
+pipeline.log
+*.log
