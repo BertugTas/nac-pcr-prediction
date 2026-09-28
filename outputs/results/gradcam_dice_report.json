@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "overall": {
+      "mean": 0.327,
+      "std": 0.236,
+      "n": 5
+    },
+    "pCR": {
+      "mean": 0.105,
+      "std": 0.105,
+      "n": 2
+    },
+    "non_pCR": {
+      "mean": 0.4749,
+      "std": 0.1753,
+      "n": 3
+    }
+  },
+  "per_patient": [
+    {
+      "patient_id": "11",
+      "dice": 0.6911459534240258,
+      "cam_path": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\gradcam_11.png",
+      "label": 0
+    },
+    {
+      "patient_id": "10",
+      "dice": 0.2617721222072363,
+      "cam_path": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\gradcam_10.png",
+      "label": 0
+    },
+    {
+      "patient_id": "9",
+      "dice": 0.21005453051467843,
+      "cam_path": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\gradcam_9.png",
+      "label": 1
+    },
+    {
+      "patient_id": "13",
+      "dice": 0.47186196007668885,
+      "cam_path": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\gradcam_13.png",
+      "label": 0
+    },
+    {
+      "patient_id": "12",
+      "dice": 0.0,
+      "cam_path": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\gradcam_12.png",
+      "label": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "viz",
+    "status": "ok",
+    "elapsed": 3.9495359999127686,
+    "error": "",
+    "outputs": {
+      "roc": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\roc_all_models.png",
+      "pr": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\pr_all_models.png",
+      "cm": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\confusion_matrices.png",
+      "calibration": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\calibration.png",
+      "comparison": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\model_comparison.png",
+      "subgroup": "C:\\Users\\ferra\\Documents\\breast_cancer_nac\\outputs\\plots\\subgroup_auc.png"
+    }
+  }
+]

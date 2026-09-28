@@ -6,3 +6,27 @@ outputs/models/
 node_modules/
 pipeline.log
 *.log
+
+# Presentation build artifacts (not part of the codebase)
+*.pptx
+NAC_Kaynak_Kodlar.zip
+package.json
+package-lock.json
+create_presentation.js
+create_presentation_plots.js
+create_final_presentation.js
+
+# One-off scripts used to patch/rebuild the presentation deck
+fix_*.py
+inspect_*.py
+verify_*.py
+patch_*.py
+repair_*.py
+insert_slides.py
+rebuild_slides_9_12.py
+
+# Development session logs (not part of the codebase)
+chat_log.md
+chat_log.txt
+SESSION_LOG.md
+plots_base64.json

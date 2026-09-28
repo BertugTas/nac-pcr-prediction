@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "auc_roc": {
+      "mean": 0.6005,
+      "std": 0.0708
+    },
+    "f1": {
+      "mean": 0.5204,
+      "std": 0.0996
+    },
+    "sensitivity": {
+      "mean": 0.7489,
+      "std": 0.2381
+    },
+    "specificity": {
+      "mean": 0.6238,
+      "std": 0.2795
+    },
+    "mcc": {
+      "mean": 0.3721,
+      "std": 0.1105
+    }
+  },
+  "fold_results": [
+    {
+      "auc_roc": 0.7,
+      "f1": 0.6154,
+      "sensitivity": 0.8,
+      "specificity": 0.8,
+      "mcc": 0.5145,
+      "threshold": 0.5171,
+      "fold": 0,
+      "best_val_auc": 0.7,
+      "stopped_epoch": 12
+    },
+    {
+      "auc_roc": 0.5259,
+      "f1": 0.5714,
+      "sensitivity": 0.4444,
+      "specificity": 0.9333,
+      "mcc": 0.4503,
+      "threshold": 0.6233,
+      "fold": 1,
+      "best_val_auc": 0.5259,
+      "stopped_epoch": 13
+    },
+    {
+      "auc_roc": 0.6125,
+      "f1": 0.4,
+      "sensitivity": 0.5,
+      "specificity": 0.8,
+      "mcc": 0.2582,
+      "threshold": 0.5609,
+      "fold": 2,
+      "best_val_auc": 0.6125,
+      "stopped_epoch": 17
+    },
+    {
+      "auc_roc": 0.6484,
+      "f1": 0.6154,
+      "sensitivity": 1.0,
+      "specificity": 0.375,
+      "mcc": 0.4082,
+      "threshold": 0.4235,
+      "fold": 3,
+      "best_val_auc": 0.6484,
+      "stopped_epoch": 11
+    },
+    {
+      "auc_roc": 0.5158,
+      "f1": 0.4,
+      "sensitivity": 1.0,
+      "specificity": 0.2105,
+      "mcc": 0.2294,
+      "threshold": 0.3115,
+      "fold": 4,
+      "best_val_auc": 0.5158,
+      "stopped_epoch": 14
+    }
+  ]
+}
